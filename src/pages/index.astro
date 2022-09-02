@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1 class="title">Welcome to <br /><span class="text-gradient">IOT Dashboard</span></h1>
+		<p class="subtitle">
+			This is a simple IOT dashboard that you can use to monitor your IoT devices.
+			For use this dashboard you need to download Simple Server and install it.
+		</p>
+		<p class="subtitle">
+			<a href=" https://github.com/enriquetecfan11/SimpleServer">Github Repo</a>
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="./medidas"
+				title="Medidas sensores wifi"
+				body="Medidas"
+			/>
+
+			<Card
+				href="./sensores"
+				title="Placas Registradas"
+				body="Todos las placas registradas"
+			/>
+			<Card
+				href="./lora"
+				title="Medidas LoRa"
+				body="Medidas dispositivos LoRa"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(90deg, rgba(0,157,255,1) 0%, rgba(0,212,255,1) 0%, rgba(0,67,255,1) 50%);
+
+	}
+
+	h1 {
+		margin: 2rem 0;
+		text-align: center;
+	}
+	
+	.subtitle {
+		text-align: center;
+		margin: 1rem 0;
+	}	
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

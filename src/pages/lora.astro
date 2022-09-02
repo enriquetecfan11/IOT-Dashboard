@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const response = await fetch("http://192.168.1.100:4000/api/sensores");
+const data = await response.json();
+---
+
+<Layout title="Medidas Wifi.">
+    <div class="container">
+        <h1>Medidas Wifi</h1>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Device</th>
+                    <th>Wifi RSSI</th>
+                    <th>LoRa RSSI</th>
+                    <th>SNR</th>
+                    <th>Packet Size</th>
+                    <th></th>
+                    <th>Temperature</th>
+                    <th>Humidiy</th>
+                    <th>WindSpeed</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    data.map((medida) => (
+                        <tr>
+                            <td>{medida.id}</td>
+                            <td>{medida.dispositivo}</td>
+                            <td>{medida.wifiRssi}</td>
+                            <td>{medida.rssi}</td>
+                            <td>{medida.snr}</td>
+                            <td>{medida.packetSize}</td>
+                            <td></td>
+                            <td>{medida.temperatura}</td>
+                            <td>{medida.humedad}</td>
+                            <td>{medida.windspeed}</td>
+                        </tr>
+                    ))
+                }
+            </tbody>
+        </table>
+
+        <h2>Datos que llegan a la base de datos sin procesar:</h2>
+        {
+            data.map((medida) => (
+                <p>{medida.id}</p>
+                <p>{medida.data}</p>
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        font-size: medium;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+    }
+
+    thead th {
+        width: 25%;
+    }
+
+    thead {
+        background-color: #333;
+        color: white;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 2%;
+    }
+</style>
