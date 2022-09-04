@@ -1,46 +1,48 @@
-# Welcome to [Astro](https://astro.build)
+<div align="center" id="top"> 
+  <h1>💻 IOT Dashboard 🚀</h1>
+  <img src="./.github/app.gif" alt="@example&#x2F;basics" />
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+  &#xa0;
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+</div>
 
-## 🚀 Project Structure
+<h1 align="center">@example&#x2F;basics</h1>
 
-Inside of your Astro project, you'll see the following folders and files:
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/enriquetecfan11/@example&#x2F;basics?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/enriquetecfan11/@example&#x2F;basics?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/enriquetecfan11/@example&#x2F;basics?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/enriquetecfan11/@example&#x2F;basics?color=56BEB8">
+  <img alt="Github issues" src="https://img.shields.io/github/issues/enriquetecfan11/@example&#x2F;basics?color=56BEB8" />
+  <img alt="Github forks" src="https://img.shields.io/github/forks/enriquetecfan11/@example&#x2F;basics?color=56BEB8" />
+  <img alt="Github stars" src="https://img.shields.io/github/stars/enriquetecfan11/@example&#x2F;basics?color=56BEB8" />
+</p>
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## :dart: About ##
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This is a simple IOT dashboard that you can use to monitor your IoT devices.
 
-Any static assets, like images, can be placed in the `public/` directory.
+For use this dashboard you need to download Simple Server and install it.
 
-## 🧞 Commands
+## :sparkles: Features ##
 
-All commands are run from the root of the project, from a terminal:
+:heavy_check_mark: Feature 1;\
+:heavy_check_mark: Feature 2;\
+:heavy_check_mark: Feature 3;
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+## :rocket: Technologies ##
 
-## 👀 Want to learn more?
+The following tools were used in this project:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Astro](https://astro.dev)
+- [Node.js](https://nodejs.org/en/)
+
+
+## :memo: License ##
+
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+
+Made with :heart: by <a href="https://github.com/enriquetecfan11" target="_blank">Enrique Rodriguez</a>
+
+&#xa0;
