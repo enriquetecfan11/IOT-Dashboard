@@ -14,21 +14,29 @@ const data = await response.json();
                     <th>Id</th>
                     <th>Device</th>
                     <th>Date</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Direction</th>
                     <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>pluviometer</th>
                     <th>Luxometer</th>
                     <th>WiFi RSSi</th>
                 </tr>
             </thead>
             <tbody>
                 {
-                  data.map((medida) => (
+                    data.map((medida) => (
                         <tr>
                             <td>{medida.id}</td>
                             <td>{medida.dispositivo}</td>
                             <td>
                                 {new Date(medida.hora).toLocaleDateString()}
                             </td>
+                            <td>{medida.wind}</td>
+                            <td>{medida.dirWind}</td>
                             <td>{medida.temperatura}</td>
+                            <td>{medida.humedadAire}</td>
+                            <td>{medida.rain}</td>
                             <td>{medida.luxes}</td>
                             <td>{medida.wifiRssi}</td>
                         </tr>
