@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout.astro";
 const response = await fetch("http://192.168.1.125:4000/api/medidas");
 const data = await response.json();
 ---
-
 <Layout title="Medidas Wifi.">
     <div class="container">
         <h1>Medidas Wifi</h1>
