@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const response = await fetch("http://192.168.1.100:4000/api/medidas");
+const response = await fetch("http://localhost:8000/api/miniestacion");
 const data = await response.json();
 ---
 
@@ -14,11 +14,8 @@ const data = await response.json();
                     <th>Id</th>
                     <th>Device</th>
                     <th>Date</th>
-                    <th>Wind Speed</th>
-                    <th>Wind Direction</th>
                     <th>Temperature</th>
-                    <th>Humidity</th>
-                    <th>pluviometer</th>
+                    <th>Preassure</th>
                     <th>Luxometer</th>
                     <th>WiFi RSSi</th>
                 </tr>
@@ -46,13 +43,10 @@ const data = await response.json();
                             <td>
                                 {new Date(medida.hora).toLocaleDateString()}
                             </td>
-                            <td>{medida.wind}</td>
-                            <td>{medida.dirWind}</td>
                             <td>{medida.temperatura}</td>
-                            <td>{medida.humedadAire}</td>
-                            <td>{medida.rain}</td>
+                            <td>{medida.presion}</td>
                             <td>{medida.luxes}</td>
-                            <td>{medida.wifiRssi}</td>
+                            <td>{medida.wifiRsii}</td>
                         </tr>
                     ))
                 }

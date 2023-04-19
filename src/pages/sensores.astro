@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const response = await fetch("http://192.168.1.100:4000/api/sensor");
+const response = await fetch("http://localhost:8000/api/sensor");
 const data = await response.json();
 ---
 
@@ -14,14 +14,16 @@ const data = await response.json();
                 <tr>
                     <th>Id</th>
                     <th>dispositivo</th>
+                    <th>UUID</th>
                 </tr>
             </thead>
             <tbody>
                 {
-                    data.map((medida) => (
+                    data.map((sensor) => (
                         <tr>
-                            <td>{medida.id}</td>
-                            <td>{medida.dispositivo}</td>
+                            <td>{sensor.id}</td>
+                            <td>{sensor.nombre}</td>
+                            <td>{sensor.uuid}</td>
                         </tr>
                     ))
                 }
@@ -34,7 +36,7 @@ const data = await response.json();
     main {
         padding: 20px;
     }
-    
+
     h1{
         text-align: center;
     }
