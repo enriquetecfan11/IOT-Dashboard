@@ -1,26 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-<<<<<<< HEAD
-const response = await fetch("http://localhost:8000/api/miniestacion");
-=======
-const response = await fetch("http://192.168.1.33:4000/api/medidas");
->>>>>>> 502ab96b8963b19ff744b84e2ae000fdd147b097
+const response = await fetch("http://192.168.1.33:4000/api/miniestacion");
 const data = await response.json();
 ---
-<Layout title="Medidas Wifi.">
+
+<Layout title="Medidas Mini Estacion Wifi">
     <div class="container">
-        <h1>Medidas Wifi</h1>
+        <h1>Medidas Miniestacion</h1>
+        <p>Medidas Miniestacion wifi con altura, presion y temperatura</p>
         <table class="tabla">
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Device</th>
-                    <th>Date</th>
-                    <th>Temperature</th>
-                    <th>Preassure</th>
-                    <th>Luxometer</th>
-                    <th>WiFi RSSi</th>
+                    <th>dispositivo</th>
+                    <th>Fecha</th>
+                    <th>Temperatura</th>
+                    <th>Altura</th>
+                    <th>Presion</th>
+                    <th>Luxes</th>
+                    <th>Wifi RSSI</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -29,10 +29,9 @@ const data = await response.json();
                         <tr>
                             <td>{medida.id}</td>
                             <td>{medida.dispositivo}</td>
-                            <td>
-                                {new Date(medida.hora).toLocaleDateString()}
-                            </td>
+                            <td> {new Date(medida.hora).toLocaleDateString()}</td>
                             <td>{medida.temperatura}</td>
+                            <td>{medida.altura}</td>
                             <td>{medida.presion}</td>
                             <td>{medida.luxes}</td>
                             <td>{medida.wifiRsii}</td>
@@ -45,26 +44,17 @@ const data = await response.json();
 </Layout>
 
 <style>
-    :root {
-        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-        --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-        --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-
-        --color-text: hsl(0, 0%, 100%);
-        --color-bg: hsl(0, 0%, 33%);
-        --color-border: hsl(17, 24%, 90%);
-    }
     main {
         padding: 20px;
     }
-    h1 {
+
+    h1{
         text-align: center;
     }
-    p {
+    p{
         text-align: center;
         font-size: medium;
     }
-
     .container {
         width: 100%;
         max-width: 1200px;
@@ -75,7 +65,6 @@ const data = await response.json();
         table-layout: fixed;
         width: 100%;
         border-collapse: collapse;
-        color: --text-color;
     }
 
     th,
