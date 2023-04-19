@@ -1,11 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-<<<<<<< HEAD
 const response = await fetch("http://localhost:8000/api/miniestacion");
-=======
-const response = await fetch("http://192.168.1.33:4000/api/medidas");
->>>>>>> 502ab96b8963b19ff744b84e2ae000fdd147b097
 const data = await response.json();
 ---
 <Layout title="Medidas Wifi.">
