@@ -10,9 +10,6 @@ echo "🎉 Container created"
 
 echo "👨 Running container"
 
-# wait 5 seconds
-sleep 5
-
-docker run -d -p 5000:5000 --name iotdashboard iotdashboard
+docker run -d -p 3000:3000 --name iotdashboard iotdashboard
 
 echo "🎉 Container Running" 
