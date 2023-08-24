@@ -1,54 +1,61 @@
-# Astro Starter Kit: Basics
+<div align="center" id="top"> 
+  <img src="./.github/app.gif" alt="Dashboard" />
 
-```
-npm create astro@latest -- --template basics
-```
+  &#xa0;
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+<!-- <a href="https://dashboard.netlify.app">Demo</a> -->
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+</div>
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<h1 align="center">Dashboard</h1>
 
-## 🚀 Project Structure
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8">
 
-Inside of your Astro project, you'll see the following folders and files:
+  `<img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8">`
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+  `<img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8">`
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8">
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+<!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8" /> -->
 
-Any static assets, like images, can be placed in the `public/` directory.
+<!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8" /> -->
 
-## 🧞 Commands
+<!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/dashboard?color=56BEB8" /> -->
 
-All commands are run from the root of the project, from a terminal:
+</p>
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+<!-- Status -->
 
-## 👀 Want to learn more?
+<!-- <h4 align="center"> 
+	🚧  Dashboard 🚀 Under construction...  🚧
+</h4> 
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<hr> -->
+
+<p align="center">
+  <a href="#dart-about">About</a>   |   
+  <a href="#sparkles-features">Features</a>   |  
+  <a href="#rocket-technologies">Technologies</a>   |  
+  <a href="#white_check_mark-requirements">Requirements</a>   |  
+  <a href="#checkered_flag-starting">Starting</a>   |  
+  <a href="#memo-license">License</a>   |  
+  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+</p>
+
+<br>
+
+## 🎯 About
+
+A simple IOT Dashboard created with Astro
+
+## 📝 License
+
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+
+Made with ❤️ by `<a href="https://github.com/enriquetecfan11" target="_blank">`enriquetecfan11 `</a>`
+
+&#xa0;
+
+`<a href="#top">`Back to top`</a>`
