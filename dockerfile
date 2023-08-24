@@ -1,9 +1,20 @@
-FROM node:lts AS runtime
+# Use the latest Node.js image as the base image
+FROM node:latest
+
+# Set the working directory to /app
 WORKDIR /app
-COPY . .
+
+# Copy the package.json and package-lock.json files to the working directory
+COPY ["package.json", "package-lock.json*", "./"]
+
+# Install the dependencies
 RUN npm install
-RUN npm run build
-ENV HOST=0.0.0.0
-ENV PORT=8080
+
+# Copy the current directory contents to the working directory
+COPY . .
+
+# Expose port 3000
 EXPOSE 3000
-CMD node ./dist/server/entry.mjs
+
+# Run the app
+CMD ["npm", "start"]
