@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const response = await fetch("http://192.168.1.72:5000/api/sensor");
+const data = await response.json();
+---
+
+<Layout title="Medidas.">
+    <div class="container">
+        <h1>Sensores</h1>
+        <p>Lista de todos los sensores</p>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>dispositivo</th>
+                    <th>UUID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    data.map((sensor) => (
+                        <tr>
+                            <td>{sensor.id}</td>
+                            <td>{sensor.nombre}</td>
+                            <td>{sensor.uuid}</td>
+                        </tr>
+                    ))
+                }
+            </tbody>
+        </table>
+    </div>
+</Layout>
+
+<style>
+    main {
+        padding: 20px;
+    }
+
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: medium;
+    }
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+    }
+
+    thead th {
+        width: 25%;
+    }
+
+    thead {
+        background-color: #333;
+        color: white;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 2%;
+    }
+</style>
